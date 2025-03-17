@@ -1,0 +1,64 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Tag from "../tag.astro";
+import { CollectionType } from "../../types";
+import { Image } from "astro:assets";
+
+type Props = {
+  post: CollectionEntry<CollectionType.Blog>;
+};
+
+const { post } = Astro.props;
+const cover = post.data.cover ?? "";
+const isCoverObject = typeof cover === "object" && cover?.src;
+const coverSrc = isCoverObject ? `${cover.src}` : `${cover}`;
+const [lang, ...slug] = post.slug.split("/");
+
+let info = "";
+if (post.data.info !== "") {
+  info = "Note: ";
+}
+---
+
+<div class="flex flex-col gap-4 rounded-lg p-4 ring-0 cursor-pointer bg-sky-800/60">
+  {
+    post.slug && (
+      <a href={`/${lang}/posts/${slug.join("/")}`} target="_self">
+        {isCoverObject ? (
+          <Image src={cover} alt="cover" class="w-full aspect-video rounded-lg self-auto object-cover" />
+        ) : (
+          <img src={coverSrc} alt="cover" class="w-full aspect-video rounded-lg self-auto object-cover" />
+        )}
+      </a>
+    )
+  }
+  <div class="flex flex-col gap-2">
+    <div class="flex gap-2">
+      <!-- <DateTag date={post.data.date} /> -->
+      {post.data.tags?.map((tag: string) => <Tag tag={tag} />)}
+    </div>
+    <a href={`/${lang}/posts/${slug.join("/")}`} target="_self">
+      <h1 class="text-3xl font-title font-black text-white">{post.data.title}</h1>
+    </a>
+    <a href={`/${lang}/posts/${slug.join("/")}`} target="_self">
+      {
+        post.data.size !== "" && (
+          <>
+            <p class="text-2xl text-white">
+              <span class="text-white font-bold">Product size: </span>
+              {post.data.size}
+            </p>
+            <p class="text-2xl text-white">
+              <span class="text-white font-bold">Space requirement: </span>
+              {post.data.space}
+            </p>
+          </>
+        )
+      }
+      <p class="text-lg text-white py-2">{post.data.description}</p>
+      <p class="text-lg text-white">
+        <span class="text-white font-bold">{info} </span>{post.data.info}
+      </p>
+    </a>
+  </div>
+</div>

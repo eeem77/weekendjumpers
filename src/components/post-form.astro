@@ -1,0 +1,218 @@
+---
+type Props = {
+  // onsubmit: (event: Event) => void;
+  post: {
+    data: {
+      title: string;
+    };
+  };
+};
+
+const { post } = Astro.props;
+const defaultValue = post.data.title;
+---
+
+<form
+  id="form"
+  action="https://api.web3forms.com/submit"
+  method="POST"
+  class="flex flex-col w-[100%] mx-auto p-4 bg-sky-800/60 rounded shadow-md text-white"
+>
+  <input type="hidden" name="access_key" value={import.meta.env.ACCESS_KEY} />
+  <input type="hidden" name="subject" value="Weekend Jumpers Form Contact" />
+  <input type="hidden" name="form_name" value="Weekend Jumpers" />
+  <h2 class="text-2xl font-bold mb-4">Reserve your next bounce house</h2>
+  <label class="mb-2" for="name">Name:</label>
+  <input type="text" id="name" name="name" required class="mb-4 p-2 border border-gray-300 rounded text-black" />
+
+  <label class="mb-2" for="email">Email:</label>
+  <input type="text" id="email" name="email" required class="mb-4 p-2 border border-gray-300 rounded text-black" />
+
+  <label class="mb-2" for="phone">Phone:</label>
+  <input
+    type="tel"
+    id="phone"
+    name="phone"
+    oninput="formatPhoneNumber(this)"
+    required
+    class="mb-4 p-2 border border-gray-300 rounded text-black"
+  />
+
+  <label class="mb-2" for="product">Product:</label>
+  <select id="product" name="product" required class="mb-4 p-2 border border-gray-300 rounded text-black">
+    {
+      defaultValue === "Module Front Slide" && (
+        <>
+          <option value="Module Front Slide" selected>
+            Module Front Slide
+          </option>
+          <option value="Multi-Color Castle Module">Multi-Color Castle Module</option>
+          <option value="Multi-Color Mini Castle Bounce">Multi-Color Mini Castle Bounce</option>
+          <option value="Hot Air Balloons Combo">Hot Air Balloons Combo</option>
+          <option value="Module Castle Side Slide Combo">Module Castle Side Slide Combo</option>
+          <option value="Side Slide Module Combo">Side Slide Module Combo</option>
+          <option value="Themed Art Banner">Themed Art Banner</option>
+          <option value="Generator 3500 Watts">Generator 3500 Watts</option>
+        </>
+      )
+    }
+    {
+      defaultValue === "Multi-Color Castle Module" && (
+        <>
+          <option value="Module Front Slide">Module Front Slide</option>
+          <option value="Multi-Color Castle Module" selected>
+            Multi-Color Castle Module
+          </option>
+          <option value="Multi-Color Mini Castle Bounce">Multi-Color Mini Castle Bounce</option>
+          <option value="Hot Air Balloons Combo">Hot Air Balloons Combo</option>
+          <option value="Module Castle Side Slide Combo">Module Castle Side Slide Combo</option>
+          <option value="Side Slide Module Combo">Side Slide Module Combo</option>
+          <option value="Themed Art Banner">Themed Art Banner</option>
+          <option value="Generator 3500 Watts">Generator 3500 Watts</option>
+        </>
+      )
+    }
+    {
+      defaultValue === "Multi-Color Mini Castle Bounce" && (
+        <>
+          <option value="Module Front Slide">Module Front Slide</option>
+          <option value="Multi-Color Castle Module">Multi-Color Castle Module</option>
+          <option value="Multi-Color Mini Castle Bounce" selected>
+            Multi-Color Mini Castle Bounce
+          </option>
+          <option value="Hot Air Balloons Combo">Hot Air Balloons Combo</option>
+          <option value="Module Castle Side Slide Combo">Module Castle Side Slide Combo</option>
+          <option value="Side Slide Module Combo">Side Slide Module Combo</option>
+          <option value="Themed Art Banner">Themed Art Banner</option>
+          <option value="Generator 3500 Watts">Generator 3500 Watts</option>
+        </>
+      )
+    }
+    {
+      defaultValue === "Hot Air Balloons Combo" && (
+        <>
+          <option value="Module Front Slide">Module Front Slide</option>
+          <option value="Multi-Color Castle Module">Multi-Color Castle Module</option>
+          <option value="Multi-Color Mini Castle Bounce">Multi-Color Mini Castle Bounce</option>
+          <option value="Hot Air Balloons Combo" selected>
+            Hot Air Balloons Combo
+          </option>
+          <option value="Module Castle Side Slide Combo">Module Castle Side Slide Combo</option>
+          <option value="Side Slide Module Combo">Side Slide Module Combo</option>
+          <option value="Themed Art Banner">Themed Art Banner</option>
+          <option value="Generator 3500 Watts">Generator 3500 Watts</option>
+        </>
+      )
+    }
+    {
+      defaultValue === "Module Castle Side Slide Combo" && (
+        <>
+          <option value="Module Front Slide">Module Front Slide</option>
+          <option value="Multi-Color Castle Module">Multi-Color Castle Module</option>
+          <option value="Multi-Color Mini Castle Bounce">Multi-Color Mini Castle Bounce</option>
+          <option value="Hot Air Balloons Combo">Hot Air Balloons Combo</option>
+          <option value="Module Castle Side Slide Combo" selected>
+            Module Castle Side Slide Combo
+          </option>
+          <option value="Side Slide Module Combo">Side Slide Module Combo</option>
+          <option value="Themed Art Banner">Themed Art Banner</option>
+          <option value="Generator 3500 Watts">Generator 3500 Watts</option>
+        </>
+      )
+    }
+    {
+      defaultValue === "Side Slide Module Combo" && (
+        <>
+          <option value="Module Front Slide">Module Front Slide</option>
+          <option value="Multi-Color Castle Module">Multi-Color Castle Module</option>
+          <option value="Multi-Color Mini Castle Bounce">Multi-Color Mini Castle Bounce</option>
+          <option value="Hot Air Balloons Combo">Hot Air Balloons Combo</option>
+          <option value="Module Castle Side Slide Combo">Module Castle Side Slide Combo</option>
+          <option value="Side Slide Module Combo" selected>
+            Side Slide Module Combo
+          </option>
+          <option value="Themed Art Banner">Themed Art Banner</option>
+          <option value="Generator 3500 Watts">Generator 3500 Watts</option>
+        </>
+      )
+    }
+    {
+      defaultValue === "Themed Art Banner" && (
+        <>
+          <option value="Module Front Slide">Module Front Slide</option>
+          <option value="Multi-Color Castle Module">Multi-Color Castle Module</option>
+          <option value="Multi-Color Mini Castle Bounce">Multi-Color Mini Castle Bounce</option>
+          <option value="Hot Air Balloons Combo">Hot Air Balloons Combo</option>
+          <option value="Module Castle Side Slide Combo">Module Castle Side Slide Combo</option>
+          <option value="Side Slide Module Combo">Side Slide Module Combo</option>
+          <option value="Themed Art Banner" selected>
+            Themed Art Banner
+          </option>
+          <option value="Generator 3500 Watts">Generator 3500 Watts</option>
+        </>
+      )
+    }
+    {
+      defaultValue === "Generator 3500 Watts" && (
+        <>
+          <option value="Module Front Slide">Module Front Slide</option>
+          <option value="Multi-Color Castle Module">Multi-Color Castle Module</option>
+          <option value="Multi-Color Mini Castle Bounce">Multi-Color Mini Castle Bounce</option>
+          <option value="Hot Air Balloons Combo">Hot Air Balloons Combo</option>
+          <option value="Module Castle Side Slide Combo">Module Castle Side Slide Combo</option>
+          <option value="Side Slide Module Combo">Side Slide Module Combo</option>
+          <option value="Themed Art Banner">Themed Art Banner</option>
+          <option value="Generator 3500 Watts" selected>
+            Generator 3500 Watts
+          </option>
+        </>
+      )
+    }
+  </select>
+  <label class="mb-2" for="date">Date:</label>
+  <input type="date" id="date" name="date" required class="mb-4 p-2 border border-gray-300 rounded text-black" />
+
+  <label class="mb-2" for="start-time">Start time:</label>
+  <input
+    type="time"
+    id="start-time"
+    name="start-time"
+    required
+    class="mb-4 p-2 border border-gray-300 rounded text-black"
+  />
+
+  <label class="mb-2" for="end-time">End time:</label>
+  <input
+    type="time"
+    id="end-time"
+    name="end-time"
+    required
+    class="mb-4 p-2 border border-gray-300 rounded text-black"
+  />
+
+  <label class="mb-2" for="address">Delivery Address:</label>
+  <input type="text" id="address" name="address" required class="mb-4 p-2 border border-gray-300 rounded text-black" />
+
+  <label class="mb-2" for="comment">Comment:</label>
+  <textarea id="comment" name="comment" required class="mb-4 p-2 border border-gray-300 text-black rounded"></textarea>
+
+  <input type="hidden" name="redirect" value="https://web3forms.com/success" />
+
+  <button type="submit" class="bg-sky-400 text-white p-2 rounded hover:bg-green-600">Reserve Now</button>
+</form>
+<script is:inline>
+  function formatPhoneNumber(input) {
+    console.log(input.value);
+
+    // Elimina todo lo que no sea un número
+    let numbers = input.value.replace(/\D/g, "");
+
+    // Aplica el formato (XXX) XXX-XXXX
+    if (numbers.length > 0) {
+      numbers = numbers.match(/^(\d{0,3})(\d{0,3})(\d{0,4})$/);
+      input.value = !numbers[2]
+        ? numbers[1]
+        : "(" + numbers[1] + ") " + numbers[2] + (numbers[3] ? "-" + numbers[3] : "");
+    }
+  }
+</script>
