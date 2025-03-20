@@ -2,10 +2,10 @@
 
 export const SITE_FAVICON = "/logo.png";
 export const SITE_LOGO = "/leo.png";
-export const SITE_TITLE = "WEEKEND JUMPERS";
+export const SITE_TITLE = "Weekend Jumpers";
 export const SITE_URL = "https://weekendjumpers.com";
 export const SITE_DESCRIPTION = `
-  At Weekend Jumpers, we are dedicated to creating magical and unforgettable moments for children. Specializing in the rental of inflatable bounce houses, we transform parties and events into experiences filled with fun, laughter, and joy. Our products, designed with the highest standards of quality and safety, are meant to inflate not just bounce houses, but also hearts. With a professional approach and a touch of magic, we ensure that every event is unique and special. Because at Weekend Jumpers, we believe that children's smiles are the greatest gift, and we are here to make them shine. Turn your celebration into a memory that lasts forever!
+  <h1>ABOUT OUR BOUNCE HOUSE RENTAL SERVICES</h1>
 `;
 export const ME_AVATAR = "/logo.png";
 export const LANGUAGES = ['en'];
@@ -13,13 +13,13 @@ export const LANGUAGES = ['en'];
 export const MENUS = [
   {
     title: " Contact Us",
-    link: "/me",
+    link: "/contact-us",
     target: "_self",
     icon: "",
   },
 ];
 
-export const FOOTER_CONTENT = "weekendjumpers. All rights reserved.";
+export const FOOTER_CONTENT = "Weekend Jumpers.  All rights reserved.";
 
 export const CONTACTS = {
   linkedIn: "YOUR_LINKEDIN_URL",
@@ -28,7 +28,9 @@ export const CONTACTS = {
 };
 
 export const SLOGAN = "Fun that fills the heart, smiles that last forever.";
-export const ME_DESCRIPTION = `At Weekend Jumpers, we are dedicated to creating magical and unforgettable moments for children. Specializing in the rental of inflatable bounce houses, we transform parties and events into experiences filled with fun, laughter, and joy. Our products, designed with the highest standards of quality and safety, are meant to inflate not just bounce houses, but also hearts. With a professional approach and a touch of magic, we ensure that every event is unique and special. Because at Weekend Jumpers, we believe that children's smiles are the greatest gift, and we are here to make them shine. Turn your celebration into a memory that lasts forever!`;
+export const ME_DESCRIPTION = `
+<h1>ABOUT OUR BOUNCE HOUSE RENTAL SERVICES</h1>
+`;
 
 
 export const WORK_EXPERIENCE = [

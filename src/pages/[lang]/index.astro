@@ -10,10 +10,10 @@ export async function getStaticPaths() {
       params: { lang: "en" },
       props: { posts: getPostsByLang("en") },
     },
-    {
-      params: { lang: "zh" },
-      props: { posts: getPostsByLang("zh") },
-    },
+    // {
+    //   params: { lang: "zh" },
+    //   props: { posts: getPostsByLang("zh") },
+    // },
   ];
 }
 
