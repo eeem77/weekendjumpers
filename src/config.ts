@@ -12,6 +12,12 @@ export const LANGUAGES = ['en'];
 
 export const MENUS = [
   {
+    title: "FAQs",
+    link: "/faqs",
+    target: "_self",
+    icon: "",
+  },
+  {
     title: " Contact Us",
     link: "/contact-us",
     target: "_self",
