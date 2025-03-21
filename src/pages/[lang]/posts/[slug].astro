@@ -52,7 +52,6 @@ if (post.data.info !== "") {
         {post.data.title}
       </h1>
       <div class="flex items-center justify-center gap-2">
-        <!-- <DateTag date={post.data.date} /> -->
         {post.data.tags?.map((tag) => <Tag tag={tag} />)}
       </div>
       {

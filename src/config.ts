@@ -4,9 +4,8 @@ export const SITE_FAVICON = "/logo.png";
 export const SITE_LOGO = "/leo.png";
 export const SITE_TITLE = "Weekend Jumpers";
 export const SITE_URL = "https://weekendjumpers.com";
-export const SITE_DESCRIPTION = `
-  <h1>ABOUT OUR BOUNCE HOUSE RENTAL SERVICES</h1>
-`;
+export const SITE_DESCRIPTION =
+  "Create Unforgettable Events with Our 5-Star Bounce House Rental Service. We offer premium bounce house rentals for events across the entire Bay Area, guaranteeing safety, cleanliness, and exceptional service. Our pricing includes delivery, setup, and pickup, with flexible options for extended rentals. With years of experience, we prioritize customer satisfaction and children's safety, providing thoroughly inspected products and a professional team ready to assist you in choosing the perfect inflatables for your event. Book today and pay only after setup. Contact us to confirm service availability in your area and ensure a fun-filled event.";
 export const ME_AVATAR = "/logo.png";
 export const LANGUAGES = ['en'];
 
@@ -25,7 +24,9 @@ export const MENUS = [
   },
 ];
 
-export const FOOTER_CONTENT = "Weekend Jumpers.  All rights reserved.";
+export const FOOTER_CONTENT = "Weekend Jumpers.";
+
+export const ALL_RIGHTS_RESERVED = "All rights reserved.";
 
 export const CONTACTS = {
   linkedIn: "YOUR_LINKEDIN_URL",
@@ -34,9 +35,8 @@ export const CONTACTS = {
 };
 
 export const SLOGAN = "Fun that fills the heart, smiles that last forever.";
-export const ME_DESCRIPTION = `
-<h1>ABOUT OUR BOUNCE HOUSE RENTAL SERVICES</h1>
-`;
+export const ME_DESCRIPTION =
+  "Create Unforgettable Events with Our 5-Star Bounce House Rental Service. We offer premium bounce house rentals for events across the entire Bay Area, guaranteeing safety, cleanliness, and exceptional service. Our pricing includes delivery, setup, and pickup, with flexible options for extended rentals. With years of experience, we prioritize customer satisfaction and children's safety, providing thoroughly inspected products and a professional team ready to assist you in choosing the perfect inflatables for your event. Book today and pay only after setup. Contact us to confirm service availability in your area and ensure a fun-filled event.";
 
 
 export const WORK_EXPERIENCE = [

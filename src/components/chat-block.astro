@@ -1,0 +1,66 @@
+---
+type Props = {
+  rolPerson: string;
+  textMsn: string;
+  listSection?: boolean;
+};
+
+// const updateCurrentTime = () => {
+//   const now = new Date();
+//   const hours = String(now.getHours()).padStart(2, "0");
+//   const minutes = String(now.getMinutes()).padStart(2, "0");
+//   return `${hours}:${minutes}`;
+// };
+
+// const currentTime = updateCurrentTime();
+
+const { rolPerson, textMsn, listSection } = Astro.props;
+
+let styleSection = "";
+let styleBorder = "";
+let styleText = "";
+
+rolPerson === "Weekend Jumpers"
+  ? (styleSection = "flex justify-start items-start gap-2.5")
+  : (styleSection = "flex justify-end items-start text-end gap-2.5");
+
+rolPerson === "Weekend Jumpers"
+  ? (styleText = "flex items-center space-x-2 rtl:space-x-reverse")
+  : (styleText = "flex items-center justify-end space-x-2 rtl:space-x-reverse");
+
+rolPerson === "Weekend Jumpers"
+  ? (styleBorder =
+      "flex flex-col w-full md:max-w-[70%] leading-1.5 p-4 border-gray-200 rounded-r-xl rounded-es-xl bg-amber-400/30")
+  : (styleBorder = "flex flex-col w-full md:max-w-[70%] leading-1.5 p-4 rounded-l-xl rounded-ee-xl bg-sky-400/30 text-end");
+---
+
+<div class={styleSection}>
+  {
+    rolPerson === "Weekend Jumpers" && (
+      <img class="w-10 h-10 rounded-full bg-amber-400/30 p-1" src="/logo_icon.png" alt="Jese image" />
+    )
+  }
+  <div class={styleBorder}>
+    <div class={styleText}>
+      <span class="text-xl font-semibold text-white">{rolPerson}</span>
+      <!-- <span class="text-sm font-normal text-neutral-200">{currentTime}</span> -->
+    </div>
+    <p class="text-lg font-normal py-2.5 text-gray-900 dark:text-white">
+      {textMsn}
+      {listSection && 
+    <ul class="list-decimal">
+        <li>Check the connection from the outlet to the extension cord to the blower</li>
+        <li>Check circuit breaker if it trips</li>
+        <li>Call us immediately</li>
+    </ul>
+    
+    }
+    </p>
+    <!-- <span class="text-sm font-normal text-neutral-200">Delivered</span> -->
+  </div>
+  {
+    rolPerson !== "Weekend Jumpers" && (
+      <img class="w-10 h-10 rounded-full bg-sky-400/30 p-1" src="/customer.png" alt="Jese image" />
+    )
+  }
+</div>
