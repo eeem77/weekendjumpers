@@ -41,7 +41,7 @@ export const ME_DESCRIPTION =
 
 export const WORK_EXPERIENCE = [
   {
-    company: "(408) 551 - 8916",
+    company: "(408) 882-7465",
     position: "",
     startDate: "2022",
     endDate: "2024",
